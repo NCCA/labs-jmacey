@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Image_build"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\public\;CMake Files\..\..\..\..\..\..\public\devel\;CMake Files\..\..\..\..\..\..\public\devel\2020\;CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\;CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\scripts\;CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\scripts\buildsystems\;CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\installed\;CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\installed\x64-linux\;CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\installed\x64-linux\share\;CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\installed\x64-linux\share\GTest\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/jmacey/Desktop/ASE/labs-jmacey/Image/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/jmacey/Desktop/ASE/labs-jmacey/Image/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/home/jmacey/Desktop/ASE/labs-jmacey/Image/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ImageTests">
+				<Option output="/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/ImageTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jmacey/Desktop/ASE/labs-jmacey/Image/build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jmacey/Desktop/ASE/labs-jmacey/Image/include"/>
+					<Add directory="/public/devel/2020/vcpkg/installed/x64-linux/include"/>
+					<Add directory="."/>
+					<Add directory="/public/devel/2020/include"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 ImageTests"/>
+					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ImageTests/fast">
+				<Option output="/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/ImageTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jmacey/Desktop/ASE/labs-jmacey/Image/build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jmacey/Desktop/ASE/labs-jmacey/Image/include"/>
+					<Add directory="/public/devel/2020/vcpkg/installed/x64-linux/include"/>
+					<Add directory="."/>
+					<Add directory="/public/devel/2020/include"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 ImageTests/fast"/>
+					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/jmacey/Desktop/ASE/labs-jmacey/Image/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Image">
+				<Option output="/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Image" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jmacey/Desktop/ASE/labs-jmacey/Image/build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jmacey/Desktop/ASE/labs-jmacey/Image/include"/>
+					<Add directory="."/>
+					<Add directory="/public/devel/2020/include"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 Image"/>
+					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Image/fast">
+				<Option output="/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Image" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jmacey/Desktop/ASE/labs-jmacey/Image/build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jmacey/Desktop/ASE/labs-jmacey/Image/include"/>
+					<Add directory="."/>
+					<Add directory="/public/devel/2020/include"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/rh/devtoolset-7/root/usr/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 Image/fast"/>
+					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -j12 -f &quot;/home/jmacey/Desktop/ASE/labs-jmacey/Image/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/jmacey/Desktop/ASE/labs-jmacey/Image/include/Image.h">
+			<Option target="ImageTests"/>
+			<Option target="Image"/>
+		</Unit>
+		<Unit filename="/home/jmacey/Desktop/ASE/labs-jmacey/Image/src/Image.cpp">
+			<Option target="ImageTests"/>
+			<Option target="Image"/>
+		</Unit>
+		<Unit filename="/home/jmacey/Desktop/ASE/labs-jmacey/Image/src/main.cpp">
+			<Option target="Image"/>
+		</Unit>
+		<Unit filename="/home/jmacey/Desktop/ASE/labs-jmacey/Image/tests/ImageTests.cpp">
+			<Option target="ImageTests"/>
+		</Unit>
+		<Unit filename="/home/jmacey/Desktop/ASE/labs-jmacey/Image/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/jmacey/Desktop/ASE/labs-jmacey/Image/../../../../../../public/devel/2020/vcpkg/scripts/buildsystems/vcpkg.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\scripts\buildsystems\"/>
+		</Unit>
+		<Unit filename="/home/jmacey/Desktop/ASE/labs-jmacey/Image/../../../../../../public/devel/2020/vcpkg/installed/x64-linux/share/GTest/GTestConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\installed\x64-linux\share\GTest\"/>
+		</Unit>
+		<Unit filename="/home/jmacey/Desktop/ASE/labs-jmacey/Image/../../../../../../public/devel/2020/vcpkg/installed/x64-linux/share/GTest/GTestConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\installed\x64-linux\share\GTest\"/>
+		</Unit>
+		<Unit filename="/home/jmacey/Desktop/ASE/labs-jmacey/Image/../../../../../../public/devel/2020/vcpkg/installed/x64-linux/share/GTest/GTestTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\installed\x64-linux\share\GTest\"/>
+		</Unit>
+		<Unit filename="/home/jmacey/Desktop/ASE/labs-jmacey/Image/../../../../../../public/devel/2020/vcpkg/installed/x64-linux/share/GTest/GTestTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\installed\x64-linux\share\GTest\"/>
+		</Unit>
+		<Unit filename="/home/jmacey/Desktop/ASE/labs-jmacey/Image/../../../../../../public/devel/2020/vcpkg/installed/x64-linux/share/GTest/GTestTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\public\devel\2020\vcpkg\installed\x64-linux\share\GTest\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
