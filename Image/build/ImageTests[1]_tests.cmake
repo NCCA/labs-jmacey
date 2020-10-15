@@ -1,7 +1,0 @@
-add_test( RGBA.construct /home/jmacey/Desktop/ASE/labs-jmacey/Image/build/ImageTests [==[--gtest_filter=RGBA.construct]==] --gtest_also_run_disabled_tests)
-set_tests_properties( RGBA.construct PROPERTIES WORKING_DIRECTORY /home/jmacey/Desktop/ASE/labs-jmacey/Image/build)
-add_test( RGBA.userCtor /home/jmacey/Desktop/ASE/labs-jmacey/Image/build/ImageTests [==[--gtest_filter=RGBA.userCtor]==] --gtest_also_run_disabled_tests)
-set_tests_properties( RGBA.userCtor PROPERTIES WORKING_DIRECTORY /home/jmacey/Desktop/ASE/labs-jmacey/Image/build)
-add_test( RGBA.copy /home/jmacey/Desktop/ASE/labs-jmacey/Image/build/ImageTests [==[--gtest_filter=RGBA.copy]==] --gtest_also_run_disabled_tests)
-set_tests_properties( RGBA.copy PROPERTIES WORKING_DIRECTORY /home/jmacey/Desktop/ASE/labs-jmacey/Image/build)
-set( ImageTests_TESTS RGBA.construct RGBA.userCtor RGBA.copy)
