@@ -122,6 +122,20 @@ TEST(IMAGE,setPixel)
   EXPECT_EQ(p.a,255);
 
   EXPECT_FALSE(a.setPixel(29342,5995,255,128,55,255));
+}
+
+TEST(IMAGE,setPixelRGBA)
+{
+  Image a(20,20);
+  RGBA p{255,128,55,255};
+  EXPECT_TRUE(a.setPixel(2,5,p));
+  auto p1=a.getPixel(2,5);
+  EXPECT_EQ(p1.r,255);
+  EXPECT_EQ(p1.g,128);
+  EXPECT_EQ(p1.b,55);
+  EXPECT_EQ(p1.a,255);
+
+  EXPECT_FALSE(a.setPixel(29342,5995,{255,128,55,255}));
 
 
 

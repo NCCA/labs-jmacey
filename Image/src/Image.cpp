@@ -52,3 +52,17 @@ bool Image::setPixel(size_t _x, size_t _y,unsigned char _r, unsigned char _g, un
   return true;
 }
 
+
+bool Image::setPixel(size_t _x, size_t _y, RGBA _p)
+{
+  if(_x >m_width || _y>m_height)
+  {
+    return false;
+  }
+  m_pixels[m_width*_y + _x]=_p;
+  return true;
+}
+
+
+
+

@@ -44,7 +44,8 @@ public :
   size_t height () const;
   RGBA getPixel(size_t _x, size_t y) const ;
   void clear(unsigned char _r, unsigned char _g, unsigned char _b, unsigned char _a=255);
-  bool setPixel(size_t _x, size_t _y,unsigned char _r, unsigned char _g, unsigned char _b, unsigned char _a=255);
+  bool setPixel(size_t _x, size_t _y,unsigned char _r, unsigned char _g, unsigned char _b, unsigned char _a=255) ;
+  bool setPixel(size_t _x, size_t _y,RGBA _p);
 private :
   size_t m_width=0;
   size_t m_height=0;
