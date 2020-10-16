@@ -111,6 +111,21 @@ TEST(IMAGE,clear)
 }
 
 
+TEST(IMAGE,setPixel)
+{
+  Image a(20,20);
+  EXPECT_TRUE(a.setPixel(2,5,255,128,55,255));
+  auto p=a.getPixel(2,5);
+  EXPECT_EQ(p.r,255);
+  EXPECT_EQ(p.g,128);
+  EXPECT_EQ(p.b,55);
+  EXPECT_EQ(p.a,255);
+
+  EXPECT_FALSE(a.setPixel(29342,5995,255,128,55,255));
+
+
+
+}
 
 
 

@@ -41,3 +41,14 @@ void Image::clear(unsigned char _r, unsigned char _g, unsigned char _b, unsigned
 }
 
 
+bool Image::setPixel(size_t _x, size_t _y,unsigned char _r, unsigned char _g, unsigned char _b, unsigned char _a)
+{
+  if(_x >m_width || _y>m_height)
+  {
+    return false;
+  }
+  RGBA p{_r,_g,_b,_a};
+  m_pixels[m_width*_y + _x]=p;
+  return true;
+}
+
