@@ -134,11 +134,13 @@ TEST(IMAGE,setPixelRGBA)
   EXPECT_EQ(p1.g,128);
   EXPECT_EQ(p1.b,55);
   EXPECT_EQ(p1.a,255);
-
   EXPECT_FALSE(a.setPixel(29342,5995,{255,128,55,255}));
+}
 
-
-
+TEST(IMAGE,save)
+{
+  Image a(200,200,255,0,0,255);
+  EXPECT_TRUE(a.save("test.png"));
 }
 
 
