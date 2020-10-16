@@ -81,3 +81,36 @@ TEST(IMAGE,getPixelUser)
 }
 
 
+
+TEST(IMAGE,clear)
+{
+  Image a(20,20);
+  for(size_t y=0; y<a.height(); ++y)
+  {
+    for(size_t x=0; x<a.width(); ++x)
+    {
+      auto p = a.getPixel(x,y);
+      EXPECT_EQ(p.r,0);
+      EXPECT_EQ(p.g,0);
+      EXPECT_EQ(p.b,0);
+      EXPECT_EQ(p.a,0);
+    }
+  }
+  a.clear(12,128,255,57);
+  for(size_t y=0; y<a.height(); ++y)
+  {
+    for(size_t x=0; x<a.width(); ++x)
+    {
+      auto p = a.getPixel(x,y);
+      EXPECT_EQ(p.r,12);
+      EXPECT_EQ(p.g,128);
+      EXPECT_EQ(p.b,255);
+      EXPECT_EQ(p.a,57);
+    }
+  }
+}
+
+
+
+
+
