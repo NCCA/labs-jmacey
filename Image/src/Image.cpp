@@ -80,4 +80,65 @@ bool Image::save(std::string_view _fname) const
   return success;
 }
 
+  void Image::line(int _sx, int _sy, int _ex, int _ey, unsigned char _r, unsigned char _g, unsigned char _b, unsigned char _a  ) 
+  {
+    line(_sx,_sy,_ex,_ey,RGBA{_r,_g,_b,_a});
+  }
+  void Image::line(int _sx, int _sy, int _ex, int _ey, const RGBA &_p ) 
+  {
+    // make local copies of the inputs to match the algorithm on wikipedia
+    int x0=_sx;
+    int x1=_ex;
+    int y0=_sy;
+    int y1=_ey;
+
+    int dx=std::abs(x1-x0);
+    int sx = (x0<x1) ? 1 : -1;
+    int dy = -abs(y1-y0);
+    int sy = y0 < y1 ? 1 : -1;
+    int err = dx+dy;
+    while(true)
+    {
+      setPixel(x0,y0,_p);
+      if (x0==x1 && y0==y1) 
+      {
+        break;
+      }
+      int e2 = 2*err;
+      if (e2 >= dy) 
+      {
+            err += dy;
+            x0 += sx;
+      }
+        if (e2 <= dx)
+        {
+            err += dx;
+            y0 += sy;
+        }
+      }
+
+// plotLine(int x0, int y0, int x1, int y1)
+//     dx =  abs(x1-x0);
+//     sx = x0<x1 ? 1 : -1;
+//     dy = -abs(y1-y0);
+//     sy = y0<y1 ? 1 : -1;
+//     err = dx+dy;  /* error value e_xy */
+//     while (true)   /* loop */
+//         plot(x0, y0);
+//         if (x0==x1 && y0==y1) break;
+//         e2 = 2*err;
+//         if (e2 >= dy) /* e_xy+e_x > 0 */
+//             err += dy;
+//             x0 += sx;
+//         end if
+//         if (e2 <= dx) /* e_xy+e_y < 0 */
+//             err += dx;
+//             y0 += sy;
+//         end if
+//     end while
+
+
+  }
+
+
 

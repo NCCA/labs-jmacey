@@ -143,5 +143,20 @@ TEST(IMAGE,save)
   EXPECT_TRUE(a.save("test.png"));
 }
 
+TEST(IMAGE,line)
+{
+  Image a(200,200,0,0,0,255);
+  a.line(0,100,200,100,255,0,0);
+  RGBA p;
+  for(size_t i=0; i<200; ++i)
+  {
+    p=a.getPixel(i,100);
+    EXPECT_EQ(p.r,255);
+    EXPECT_EQ(p.g,0);
+    EXPECT_EQ(p.b,0);
+    EXPECT_EQ(p.a,255);
+    
+  }
+}
 
 
