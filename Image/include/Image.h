@@ -50,6 +50,8 @@ public :
   bool save(const std::string_view _fname) const;
   void line(int _sx, int _sy, int _ex, int _ey, unsigned char _r, unsigned char _g, unsigned char _b, unsigned char _a=255  ) ;
   void line(int _sx, int _sy, int _ex, int _ey, const RGBA &_p ) ;
+  void rectangle(int _tx, int _ty, int _bx, int _by, unsigned char _r, unsigned char _g, unsigned char _b, unsigned char _a=255  ) ;
+void rectangle(int _tx, int _ty, int _bx, int _by, const RGBA &_p ) ;
 
 private :
   size_t m_width=0;

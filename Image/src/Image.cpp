@@ -116,7 +116,7 @@ bool Image::save(std::string_view _fname) const
             y0 += sy;
         }
       }
-
+// from https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
 // plotLine(int x0, int y0, int x1, int y1)
 //     dx =  abs(x1-x0);
 //     sx = x0<x1 ? 1 : -1;
@@ -136,9 +136,24 @@ bool Image::save(std::string_view _fname) const
 //             y0 += sy;
 //         end if
 //     end while
-
-
+}
+void Image::rectangle(int _tx, int _ty, int _bx, int _by, unsigned char _r, unsigned char _g, unsigned char _b, unsigned char _a ) 
+{
+  rectangle(_tx,_ty,_bx,_by,RGBA{_r,_g,_b,_a});
+}
+void Image::rectangle(int _tx, int _ty, int _bx, int _by, const RGBA &_p ) 
+{
+  // this really needs error checking and make sure that _tx > _ex etc.
+  // TODO check dimensions and swap if required.
+  for (int y=_ty; y<_by; ++y)
+  {
+    for(int x=_tx; x<_bx; ++x)
+    {
+      setPixel(x,y,_p);
+    }
   }
+
+}
 
 
 

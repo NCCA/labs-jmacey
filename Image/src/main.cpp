@@ -20,5 +20,13 @@ int main()
     a.line(pointx(rng),pointy(rng),pointx(rng),pointy(rng),{colour(rng),colour(rng),colour(rng),255});
   }
   a.save("lines.png");
+  a.clear(255,255,255,255);
+  for(int i=0; i<2000; ++i)
+  {
+    a.rectangle(pointx(rng),pointy(rng),pointx(rng),pointy(rng),{colour(rng),colour(rng),colour(rng),255});
+  }
+  a.save("rect.png");
+
+
   return  EXIT_SUCCESS;
 }
