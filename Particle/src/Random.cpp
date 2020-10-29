@@ -36,10 +36,10 @@ Vec3 Random::randomVectorOnSphere(float _radius )
 	float phi = randomPositiveFloat(static_cast<float>(M_PI * 2.0f));
 	float costheta = randomFloat();
 	float u =randomPositiveFloat();
-	float theta = acos(costheta);
+	float theta = acosf(costheta);
 	float r = _radius * std::cbrt(u);
-	return Vec3(r * sin(theta) * cos(phi),
-									 r * sin(theta) * sin(phi),
-									 r * cos(theta)
+	return Vec3(r * sinf(theta) * cosf(phi),
+									 r * sinf(theta) * sinf(phi),
+									 r * cosf(theta)
 									);
 }
