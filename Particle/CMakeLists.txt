@@ -28,4 +28,6 @@ enable_testing()
 add_executable(ParticleTests)
 target_sources(ParticleTests PRIVATE tests/ParticleTests.cpp  src/Random.cpp src/Emitter.cpp src/Vec3.cpp include/Emitter.h include/Particle.h include/Vec3.h)
 target_link_libraries(ParticleTests PRIVATE GTest::gtest GTest::gtest_main )
+target_link_libraries(ParticleTests PRIVATE  fmt::fmt-header-only)
+
 gtest_discover_tests(ParticleTests)
