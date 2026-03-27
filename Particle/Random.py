@@ -46,7 +46,11 @@ class Random:
         Returns:
             Vec3: Random vector with components in [-mult, mult].
         """
-        return Vec3(Random.random_float(mult), Random.random_float(mult), Random.random_float(mult))
+        return Vec3(
+            Random.random_float(mult),
+            Random.random_float(mult),
+            Random.random_float(mult),
+        )
 
     @staticmethod
     def random_positive_vec3(mult: float = 1.0) -> Vec3:
@@ -60,7 +64,9 @@ class Random:
             Vec3: Random vector with components in [0, mult].
         """
         return Vec3(
-            Random.random_positive_float(mult), Random.random_positive_float(mult), Random.random_positive_float(mult)
+            Random.random_positive_float(mult),
+            Random.random_positive_float(mult),
+            Random.random_positive_float(mult),
         )
 
     @staticmethod
@@ -79,4 +85,8 @@ class Random:
         u = Random.random_positive_float()
         theta = math.acos(costheta)
         r = radius * (u ** (1.0 / 3.0))
-        return Vec3(r * math.sin(theta) * math.cos(phi), r * math.sin(theta) * math.sin(phi), r * math.cos(theta))
+        return Vec3(
+            r * math.sin(theta) * math.cos(phi),
+            r * math.sin(theta) * math.sin(phi),
+            r * math.cos(theta),
+        )
