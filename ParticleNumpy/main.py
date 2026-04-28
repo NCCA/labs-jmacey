@@ -2,6 +2,7 @@
 
 import OpenGL.GL as gl
 from ncca.ngl import FirstPersonCamera, ShaderLib, VAOFactory, VAOType, Vec3, VertexData
+from PySide6.QtCore import Qt
 from PySide6.QtGui import QSurfaceFormat
 from PySide6.QtOpenGL import QOpenGLWindow
 from PySide6.QtWidgets import QApplication
@@ -21,34 +22,47 @@ class MainWindow(QOpenGLWindow):
         ShaderLib.load_shader("ParticleShader", "shaders/ParticleVertex.glsl", "shaders/ParticleFragment.glsl")
         ShaderLib.use("ParticleShader")
         gl.glClearColor(0.4, 0.4, 0.4, 1.0)
-        self.emitter = Emitter(100000)
+        self.emitter = Emitter(Vec3(0, 0, 0), 10000)
         self.vao = VAOFactory.create_vao(VAOType.MULTI_BUFFER, gl.GL_POINTS)
         with self.vao as vao:
             data = VertexData(data=[], size=0)
             vao.set_data(data, index=0)
             vao.set_data(data, index=1)
 
+        self.startTimer(30)
+
     def paintGL(self):
-        gl.glPointSize(1)
+        gl.glPointSize(4)
         gl.glViewport(0, 0, self.width, self.height)
         gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT)
         ShaderLib.use("ParticleShader")
         ShaderLib.set_uniform("MVP", self.camera.get_vp())
         with self.vao as vao:
-            data = VertexData(data=self.emitter.pos.flatten(), size=self.emitter.pos.nbytes)
+            data = VertexData(data=self.emitter.position.flatten(), size=self.emitter.position.nbytes)
             vao.set_data(data, index=0)
             vao.set_vertex_attribute_pointer(0, 3, gl.GL_FLOAT, 0, 0)
             data = VertexData(data=self.emitter.colour.flatten(), size=self.emitter.colour.nbytes)
             vao.set_data(data, index=1)
             vao.set_vertex_attribute_pointer(1, 3, gl.GL_FLOAT, 0, 0)
-            vao.set_num_indices(len(self.emitter.pos))
+            vao.set_num_indices(len(self.emitter.position))
             vao.draw()
+
+    def keyPressEvent(self, event):
+        key = event.key()
+        if key == Qt.Key_Escape:
+            self.close()
 
     def resizeGL(self, w, h):
         self.width = w
         self.height = h
         ratio = self.devicePixelRatio()
         self.camera.set_projection(45.0, (w * ratio / h * ratio), 0.05, 200)
+
+    def timerEvent(self, event):
+        print("tick")
+        self.emitter.update(0.01)
+
+        self.update()
 
 
 def main():
