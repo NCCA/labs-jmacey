@@ -23,7 +23,7 @@ from Emitter import Emitter
 class MainWindow(QOpenGLWindow):
     def __init__(self):
         super().__init__()
-        self.animate = False
+        self.animate = True
         self.keys_pressed = set()
         self.rotate = False
         self.original_x_pos = 0
@@ -37,7 +37,7 @@ class MainWindow(QOpenGLWindow):
         ShaderLib.load_shader("ParticleShader", "shaders/ParticleVertex.glsl", "shaders/ParticleFragment.glsl")
         ShaderLib.use("ParticleShader")
         gl.glClearColor(0.4, 0.4, 0.4, 1.0)
-        self.emitter = Emitter(Vec3(0, 0, 0), 10000)
+        self.emitter = Emitter(Vec3(0, 0, 0), 50000, 50000, 2000, (3, 200))
         self.vao = VAOFactory.create_vao(VAOType.MULTI_BUFFER, gl.GL_POINTS)
         with self.vao as vao:
             data = VertexData(data=[], size=0)
@@ -46,10 +46,10 @@ class MainWindow(QOpenGLWindow):
 
         Primitives.create(Prims.TRIANGLE_PLANE, "ground", 50, 50, 20, 20, Vec3(0, 1, 0))
 
-        self.startTimer(30)
+        self.startTimer(16)
 
     def paintGL(self):
-        gl.glPointSize(4)
+        gl.glPointSize(2)
         gl.glViewport(0, 0, self.width, self.height)
         gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT)
         ShaderLib.use("ParticleShader")
